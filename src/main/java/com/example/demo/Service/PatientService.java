@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -40,6 +41,11 @@ public class PatientService {
     public String deletePatient(Integer patientId){
          patientRepo.deleteById(patientId);
          return "Patient deleted";
+    }
+
+    public PatientDto getPatientById(Integer patientId){
+        Optional<PatientEntity> patient = patientRepo.findById(patientId);
+        return modelMapper.map(patient, PatientDto.class);
     }
 
 

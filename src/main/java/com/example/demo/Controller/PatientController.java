@@ -25,7 +25,7 @@ public class PatientController {
         return patientService.savePatient(patientDto);
     }
 
-    @PutMapping
+    @PutMapping("/updatePatient")
     public PatientDto updatePatient(@RequestBody PatientDto patientDto){
         return patientService.updatePatient(patientDto);
     }
@@ -33,5 +33,10 @@ public class PatientController {
     @DeleteMapping("/deletePatient/{id}")
     public String deletePatient(@PathVariable Integer id){
         return patientService.deletePatient(id);
+    }
+
+    @GetMapping("/getPatient/{id}")
+    public PatientDto getSinglePatient(@PathVariable Integer id){
+        return patientService.getPatientById(id);
     }
 }
