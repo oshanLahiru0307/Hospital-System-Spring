@@ -18,14 +18,18 @@ public class PatientEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    private int age;
     private String gender;
+    private String phone;
+    private String address;
+    private String blood_group;
 
-    public String getGender() {
-        return gender;
+    public int getId() {
+        return id;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -36,12 +40,43 @@ public class PatientEntity {
         this.name = name;
     }
 
-    public int getId() {
-        return id;
+    public int getAge() {
+        return age;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setAge(int age) {
+        this.age = age;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getBlood_group() {
+        return blood_group;
+    }
+
+    public void setBlood_group(String blood_group) {
+        this.blood_group = blood_group;
+    }
 }
