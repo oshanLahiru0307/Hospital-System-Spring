@@ -48,8 +48,9 @@ public class DoctoerServices {
 
     //delete doctor using doctor id...
     public DoctorDto deleteDoctor(Integer id) {
+        Optional<DoctorEntity> doctorEntity = doctorRepo.findById(id);
         doctorRepo.deleteById(id);
-        return modelMapper.map(doctorRepo.findById(id), DoctorDto.class);
+        return modelMapper.map(doctorEntity, DoctorDto.class);
     }
 
 

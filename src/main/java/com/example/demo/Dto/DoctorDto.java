@@ -16,15 +16,6 @@ public class DoctorDto {
     private String Contact;
     private String Email;
 
-    public DoctorDto(String name, String gender, String speciality, String contact, String email) {
-        this.name = name;
-        this.gender = gender;
-        this.speciality = speciality;
-        Contact = contact;
-        Email = email;
-    }
-
-
     public int getId() {
         return id;
     }
