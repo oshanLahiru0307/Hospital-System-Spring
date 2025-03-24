@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import javax.swing.text.html.parser.Entity;
 
 @Repository
-public interface DoctorRepo extends JpaRepository<DoctorEntity, Entity> {
+public interface DoctorRepo extends JpaRepository<DoctorEntity, Integer> {
 }

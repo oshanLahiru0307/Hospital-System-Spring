@@ -24,7 +24,7 @@ public class DoctorDto {
         Email = email;
     }
 
-    /*
+
     public int getId() {
         return id;
     }
@@ -72,7 +72,6 @@ public class DoctorDto {
     public void setEmail(String email) {
         Email = email;
     }
-    */
 
 
 }
