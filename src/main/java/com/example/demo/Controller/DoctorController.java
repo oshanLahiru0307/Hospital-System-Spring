@@ -30,8 +30,8 @@ public class DoctorController {
         return doctoerServices.saveDoctor(doctorDto);
     }
 
-    @PutMapping("/updateDoctor/{doctorId}")
-    public DoctorDto updateDoctor(@PathVariable int doctorId, @RequestBody DoctorDto doctorDto){
+    @PutMapping("/updateDoctor")
+    public DoctorDto updateDoctor(@RequestBody DoctorDto doctorDto){
         return doctoerServices.updateDoctor(doctorDto);
     }
 
